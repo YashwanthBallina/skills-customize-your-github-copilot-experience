@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Catalog</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        line-height: 1.5;
+        margin: 2rem auto;
+        max-width: 760px;
+        padding: 0 1rem;
+      }
+
+      form,
+      .book-card {
+        border: 1px solid #cccccc;
+        border-radius: 6px;
+        margin: 1rem 0;
+        padding: 1rem;
+      }
+
+      label,
+      input,
+      button {
+        display: block;
+        margin-top: 0.5rem;
+      }
+
+      input,
+      button {
+        font: inherit;
+        padding: 0.4rem;
+      }
+
+      #status {
+        min-height: 1.5rem;
+      }
+
+      .error {
+        color: #a40000;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Book Catalog</h1>
+
+    <p id="status" aria-live="polite">Loading books...</p>
+
+    <section aria-labelledby="books-heading">
+      <h2 id="books-heading">Books</h2>
+      <div id="books-list"></div>
+    </section>
+
+    <section aria-labelledby="add-book-heading">
+      <h2 id="add-book-heading">Add a Book</h2>
+      <form id="book-form">
+        <label for="title">Title</label>
+        <input id="title" name="title" required />
+
+        <label for="author">Author</label>
+        <input id="author" name="author" required />
+
+        <button type="submit">Add Book</button>
+      </form>
+    </section>
+
+    <script>
+      const apiBaseUrl = "http://127.0.0.1:8000";
+      const booksList = document.querySelector("#books-list");
+      const bookForm = document.querySelector("#book-form");
+      const statusMessage = document.querySelector("#status");
+
+      async function loadBooks() {
+        // TODO: Fetch GET /books, check the response, and call renderBooks().
+      }
+
+      function renderBooks(books) {
+        // TODO: Render each book's ID, title, and author in booksList.
+      }
+
+      async function addBook(event) {
+        event.preventDefault();
+        // TODO: Read the form fields and POST JSON to /books.
+        // TODO: Show a success or error message, then refresh the catalog.
+      }
+
+      async function showBookDetails(bookId) {
+        // TODO: Fetch GET /books/{bookId} and display the returned book.
+      }
+
+      bookForm.addEventListener("submit", addBook);
+      loadBooks();
+    </script>
+  </body>
+</html>

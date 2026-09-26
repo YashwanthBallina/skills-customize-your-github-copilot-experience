@@ -72,6 +72,20 @@
           "type": "python"
         }
       ]
+    },
+    {
+      "id": "fastapi-web-client",
+      "title": "Build a Web Client for a FastAPI API",
+      "description": "Build a browser client that fetches, displays, and creates book data through a FastAPI REST API.",
+      "path": "assignments/fastapi-web-client",
+      "dueDate": "2026-10-11",
+      "attachments": [
+        {
+          "name": "Starter HTML",
+          "file": "starter-code.html",
+          "type": "html"
+        }
+      ]
     }
   ]
 }
